@@ -1,0 +1,621 @@
+/* html rules
+--------------------*/
+
+
+body{
+	font-family: sans-serif;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+
+/* id rules
+--------------------*/
+#character_sheet{
+    width: 950px;
+    height: auto;
+	display: block;
+}
+
+
+/*DCC Warrior Generator Version 4 post data css*/
+
+#characterName{
+    position:absolute;
+    top: 100px;
+    left: 45px;
+	font-size: 0.85em;
+    width:200px;
+}
+
+#characterName2{
+    position:absolute;
+    top: 100px;
+    left: 45px;
+	font-size: 0.85em;
+    width:200px;
+}
+
+
+#gender{
+    position:absolute;
+    top: 100px;
+    left: 292px;
+	font-size: 0.85em;
+}
+
+
+#alignment{
+    position:absolute;
+    top: 100px;
+    left: 363px;
+	font-size: 0.85em;
+}
+
+
+#level{
+    position:absolute;
+    top: 163px;
+    left: 48px;
+	font-size: 0.85em;
+}
+
+
+
+#class{
+    position:absolute;
+    top: 163px;
+    left: 105px;
+	font-size: 0.85em;
+}
+
+
+#title{
+    position:absolute;
+    top: 163px;
+    left: 240px;
+	font-size: 0.85em;
+}
+
+
+#profession{
+    position:absolute;
+    top: 163px;
+    left: 425px;
+	font-size: 0.85em;
+}
+
+
+#playerName{
+    position:absolute;
+    top: 100px;
+    left: 485px;
+	font-size: 0.85em;
+}
+
+
+#armourName{
+    position:absolute;
+    top: 905px;
+    left: 55px;
+    font-size: 0.8em;
+    width: 300px;
+}
+
+#armourAc{
+    position:absolute;
+    top: 800px;
+    left: 850px;
+	font-size: 0.8em;
+}
+
+
+#armourWeight{
+    position:absolute;
+    top: 800px;
+    left: 895px;
+	font-size: 0.8em;
+}
+
+#shieldName{
+    position:absolute;
+    top: 620px;
+    left: 804px;
+	font-size: 1.3em;
+}
+
+#shieldAc{
+    position:absolute;
+    top: 820px;
+    left: 850px;
+	font-size: 0.8em;
+}
+
+
+#shieldWeight{
+    position:absolute;
+    top: 820px;
+    left: 895px;
+	font-size: 0.8em;
+}
+
+
+#weaponsList{
+    position:absolute;
+    top: 1015px;
+    left: 46px;
+	font-size: 0.65em;
+}
+
+#weaponsList2{
+    position:absolute;
+    top: 1015px;
+    left: 285px;
+	font-size: 0.65em;
+}
+
+
+
+#totalArmourClassMod{
+    position:absolute;
+    top: 855px;
+    left: 850px;
+	font-size: 0.8em;
+}
+
+#totalArmourWeight{
+    position:absolute;
+    top: 820px;
+    left: 305px;
+	font-size: 0.5em;
+}
+
+#gearWeight{
+    position:absolute;
+    top: 832px;
+    left: 485px;
+	font-size: 0.5em;
+}
+
+
+
+#weaponNotes{
+    position:absolute;
+    top: 1143px;
+    left: 600px;
+	font-size: 0.4em;
+}
+
+
+#gearList{
+    position:absolute;
+    top: 660px;
+    left: 670px;
+    font-size: 0.6em;
+    width: 230px;
+}
+
+
+#wealth{
+    position:absolute;
+    top: 867px;
+    left: 670px;
+    font-size: 0.6em;
+    width: 230px;
+}
+
+
+#abilityScoreGeneration{
+    position:absolute;
+    top: 1130px;
+    left: 390px;
+    font-size: 0.5em;
+    width: 240px;
+}
+
+
+
+#luckyWeapon{
+    position:absolute;
+    top: 660px;
+    left: 390px;
+    font-size: 0.8em;
+}
+
+
+#baseAC{
+    position:absolute;
+    top: 352px;
+    left: 222px;
+	font-size: 0.9em;
+}
+
+
+#trainedWeapon{
+    position:absolute;
+    top: 755px;
+    left: 60px;
+	font-size: 0.8em;
+    width: 260px;
+}
+
+
+#tradeGoods{
+    position:absolute;
+    top: 515px;
+    left: 360px;
+	font-size: 0.6em;
+}
+
+
+
+
+#strength{
+    position:absolute;
+    top: 310px;
+    left: 530px;
+	font-size: 1.5em;
+}
+
+
+#strengthMod{
+    position:absolute;
+    top: 310px;
+    left: 600px;
+	font-size: 1.5em;
+}
+
+
+#agility{
+    position:absolute;
+    top: 358px;
+    left: 530px;
+	font-size: 1.5em;
+}
+
+#agilityMod{
+    position:absolute;
+    top: 358px;
+    left: 600px;
+	font-size: 1.5em;
+}
+
+
+
+#stamina{
+    position:absolute;
+    top: 407px;
+    left: 530px;
+	font-size: 1.5em;
+}
+
+#staminaMod{
+    position:absolute;
+    top: 407px;
+    left: 600px;
+	font-size: 1.5em;
+}
+
+
+#personality{
+    position:absolute;
+    top: 454px;
+    left: 530px;
+	font-size: 1.5em;
+}
+
+#personalityMod{
+    position:absolute;
+    top: 454px;
+    left: 600px;
+	font-size: 1.5em;
+}
+
+
+#intelligence{
+    position:absolute;
+    top: 499px;
+    left: 530px;
+	font-size: 1.5em;
+}
+
+#intelligenceMod{
+    position:absolute;
+    top: 499px;
+    left: 600px;
+	font-size: 1.5em;
+}
+
+#luck{
+    position:absolute;
+    top: 543px;
+    left: 530px;
+	font-size: 1.5em;
+}
+
+
+#luckMod{
+    position:absolute;
+    top: 543px;
+    left: 600px;
+	font-size: 1.5em;
+}
+
+
+#speed{
+    position:absolute;
+    top: 435px;
+    left: 845px;
+	font-size: 1.4em;
+}
+
+
+#xpNextLevel{
+    position:absolute;
+    top: 595px;
+    left: 830px;
+	font-size: 0.8em;
+}
+
+
+#armourClass{
+    position:absolute;
+    top: 285px;
+    left: 110px;
+	font-size: 1.8em;
+}
+
+
+#armourClassBase{
+    position:absolute;
+    top: 285px;
+    left: 160px;
+	font-size: 1.8em;
+}
+
+
+
+#armourACBonus{
+    position:absolute;
+    top: 955px;
+    left: 60px;
+	font-size: 0.9em;
+}
+
+#armourACCheckPen{
+    position:absolute;
+    top: 955px;
+    left: 150px;
+	font-size: 0.9em;
+}
+
+#armourACSpeedPen{
+    position:absolute;
+    top: 955px;
+    left: 238px;
+	font-size: 0.9em;
+}
+
+#fumbleDie{
+    position:absolute;
+    top: 955px;
+    left: 305px;
+	font-size: 0.9em;
+}
+
+#hitPoints{
+    position:absolute;
+    top: 385px;
+    left: 230px;
+	font-size: 1.1em;
+}
+
+#reflex{
+    position:absolute;
+    top: 330px;
+    left: 750px;
+	font-size: 1.6em;
+}
+
+#fort{
+    position:absolute;
+    top: 330px;
+    left: 840px;
+	font-size: 1.6em;
+    color: white;
+}
+
+#will{
+    position:absolute;
+    top: 430px;
+    left: 750px;
+	font-size: 1.6em;
+    color: white;
+}
+
+#criticalDieTable{
+    position:absolute;
+    top: 227px;
+    left: 255px;
+    font-size: 0.85em;
+}
+
+
+#initiative{
+    position:absolute;
+    top: 227px;
+    left: 385px;
+    font-size: 0.9em;
+}
+
+#luckDie{
+    position:absolute;
+    top: 227px;
+    left: 640px;
+    font-size: 0.9em;
+}
+
+#attackBonus{
+    position:absolute;
+    top: 227px;
+    left: 485px;
+    font-size: 0.9em;
+}
+
+#actionDice{
+    position:absolute;
+    top: 227px;
+    left: 50px;
+    font-size: 0.85em;
+}
+
+
+#birthAugur{
+    position:absolute;
+    top: 625px;
+    left: 60px;
+    font-size: 0.8em;
+    width: 280px;
+}
+
+#languages{
+    position:absolute;
+    top: 1052px;
+    left:  675px;
+    font-size: 0.8em;
+    width: 240px;
+}
+
+
+#melee{
+    position:absolute;
+    top: 500px;
+    left: 165px;
+	font-size: 1.2em;
+}
+
+
+#range{
+    position:absolute;
+    top: 542px;
+    left: 165px;
+	font-size: 1.2em;
+}
+
+
+
+#meleeDamage{
+    position:absolute;
+    top: 500px;
+    left: 240px;
+	font-size: 1.2em;
+}
+
+
+#rangeDamage{
+    position:absolute;
+    top: 542px;
+    left: 240px;
+	font-size: 1.2em;
+}
+
+
+#dieRollMethod{
+    position: absolute;
+    top: 100px;
+    left:  50px;
+	font-size: 0.5em;
+}
+
+
+#backstab{
+    position:absolute;
+    top: 671px;
+    left: 565px;
+    font-size: 0.8em;
+}
+
+#sneakSilently{
+    position:absolute;
+    top: 698px;
+    left: 565px;
+    font-size: 0.8em;
+}
+
+#hideInShadows{
+    position:absolute;
+    top: 722px;
+    left: 565px;
+    font-size: 0.8em;
+}
+
+#pickPocket{
+    position:absolute;
+    top: 750px;
+    left: 565px;
+    font-size: 0.8em;
+}
+
+
+#climb{
+    position:absolute;
+    top: 776px;
+    left: 565px;
+    font-size: 0.8em;
+}
+
+#pickLock{
+    position:absolute;
+    top: 802px;
+    left: 565px;
+    font-size: 0.8em;
+}
+
+#findTrap{
+    position:absolute;
+    top: 833px;
+    left: 565px;
+    font-size: 0.8em;
+}
+
+#disableTrap{
+    position:absolute;
+    top: 861px;
+    left: 565px;
+    font-size: 0.8em;
+}
+
+#forgeDoc{
+    position:absolute;
+    top: 888px;
+    left: 565px;
+    font-size: 0.8em;
+}
+
+#disguiseSelf{
+    position:absolute;
+    top: 913px;
+    left: 565px;
+    font-size: 0.8em;
+}
+
+#readLanguages{
+    position:absolute;
+    top: 940px;
+    left: 565px;
+    font-size: 0.8em;
+}
+
+#handlePoison{
+    position:absolute;
+    top: 965px;
+    left: 565px;
+    font-size: 0.8em;
+}
+
+#castSpellScroll{
+    position:absolute;
+    top: 990px;
+    left: 565px;
+    font-size: 0.8em;
+}
