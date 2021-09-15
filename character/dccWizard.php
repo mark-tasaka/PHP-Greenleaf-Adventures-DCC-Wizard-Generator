@@ -24,7 +24,6 @@
     <!--PHP-->
     <?php
     
-    include 'php/armour.php';
     include 'php/checks.php';
     include 'php/weapons.php';
     include 'php/gear.php';
@@ -38,6 +37,8 @@
     include 'php/nameSelect.php';
     include 'php/gender.php';
     include 'php/languages.php';
+    include 'php/familiar.php';
+    include 'php/patron.php';
     
 
         if(isset($_POST["theCharacterName"]))
@@ -166,46 +167,13 @@
         $nameGenMessage = getNameDescript($givenName, $surname);
         $generationMessage = generationMesssage ($abilityScoreGen);
     
-    
-        if(isset($_POST["theArmour"]))
-        {
-            $armour = $_POST["theArmour"];
-        }
-    
-        $armourName = getArmour($armour)[0];
-        
-        $armourACBonus = getArmour($armour)[1];
-        $armourCheckPen = getArmour($armour)[2];
-        $armourSpeedPen = getArmour($armour)[3];
-        $armourFumbleDie = getArmour($armour)[4];
 
-        if(isset($_POST['theCheckBoxShield']) && $_POST['theCheckBoxShield'] == 1) 
-        {
-            $shieldName = getArmour(10)[0];
-            $shieldACBonus = getArmour(10)[1];
-            $shieldCheckPen = getArmour(10)[2];
-            $shieldSpeedPen = getArmour(10)[3];
-            $shieldFumbleDie = getArmour(10)[4];
-        }
-        else
-        {
-            $shieldName = getArmour(11)[0];
-            $shieldACBonus = getArmour(11)[1];
-            $shieldCheckPen = getArmour(11)[2];
-            $shieldSpeedPen = getArmour(11)[3];
-            $shieldFumbleDie = getArmour(11)[4];
-        } 
-
-       $totalAcDefense = $armourACBonus + $shieldACBonus;
-       $totalAcCheckPen = $armourCheckPen + $shieldCheckPen;
-       $speedPenality = $armourSpeedPen;
-
-       $speed = 30 - $armourSpeedPen;
+       $speed = 30;
 
 
        $criticalDie = criticalDie($level);
-
-       $luckDie = luckDie($level);
+       
+       $spellCheck = $intelligenceMod + $level;
 
        $actionDice = actionDice($level);
 
@@ -217,7 +185,7 @@
        
        $baseArmourClass = getAC($agilityMod, $luckMod, $luckySign[0]);
 
-       $armourClass = $baseArmourClass + $totalAcDefense;
+       $armourClass = $baseArmourClass;
 
        $ref = savingThrowReflex($level);
        $ref += $agilityMod;
@@ -235,7 +203,7 @@
        $will += $willLuckSign;
 
        $speed = getSpeed($luckMod, $luckySign[0]);
-       $speed -= $speedPenality;
+       //$speed -= $speedPenality;
 
        $title = title($level, $alignment);
 
@@ -628,74 +596,22 @@
 
 
               
-       <span id="armourName">
-           <?php
-           if($armourName == "")
-           {
-               echo $shieldName;
-           }
-           else if($shieldName == "")
-           {
-                echo $armourName;
-           }
-           else
-           {
-            echo $armourName . " & " . $shieldName;
-           }
-           ?>
-        </span>
-
-        <span id="armourACBonus">
-            <?php
-                echo $totalAcDefense;
-            ?>
-        </span>
-
-        
-        <span id="armourACCheckPen">
-            <?php
-                echo $totalAcCheckPen;
-            ?>
-        </span>
-        
-        <span id="armourACSpeedPen">
-            <?php
-            if($speedPenality == 0)
-            {
-                echo "-";
-            }
-            else
-            {
-                echo "-" . $speedPenality;
-            }
-            ?>
-        </span>
-
-        <span id="fumbleDie">
-            <?php
-            if($armourName == "")
-            {
-                echo $shieldFumbleDie;
-            }
-            else
-            {
-                echo $armourFumbleDie;
-            }
-            ?>
-        </span>
 
         <span id="criticalDieTable">
             <?php
                 echo $criticalDie;
             ?>
         </span>
-        
-        <span id="luckDie">
+
+                
+        <span id="spellCheck">
             <?php
-                echo $luckDie;
+                $spellCheck = getModSign($spellCheck);
+                echo $spellCheck;
             ?>
         </span>
 
+        
         <span id="initiative">
             <?php
                 $initiative = getModSign($initiative);
