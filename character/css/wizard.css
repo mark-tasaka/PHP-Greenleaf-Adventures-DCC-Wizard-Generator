@@ -40,7 +40,7 @@ body{
 #gender{
     position:absolute;
     top: 100px;
-    left: 292px;
+    left: 287px;
 	font-size: 0.85em;
 }
 
@@ -89,7 +89,7 @@ body{
 #playerName{
     position:absolute;
     top: 100px;
-    left: 485px;
+    left: 460px;
 	font-size: 0.85em;
 }
 
@@ -436,7 +436,7 @@ body{
 #criticalDieTable{
     position:absolute;
     top: 227px;
-    left: 255px;
+    left: 275px;
     font-size: 0.85em;
 }
 
@@ -444,21 +444,21 @@ body{
 #initiative{
     position:absolute;
     top: 227px;
-    left: 385px;
+    left: 390px;
     font-size: 0.9em;
 }
 
-#luckDie{
+#spellCheck{
     position:absolute;
     top: 227px;
-    left: 640px;
+    left: 590px;
     font-size: 0.9em;
 }
 
 #attackBonus{
     position:absolute;
     top: 227px;
-    left: 485px;
+    left: 470px;
     font-size: 0.9em;
 }
 
@@ -480,8 +480,8 @@ body{
 
 #languages{
     position:absolute;
-    top: 1052px;
-    left:  675px;
+    top: 750px;
+    left:  390px;
     font-size: 0.8em;
     width: 240px;
 }
@@ -528,94 +528,40 @@ body{
 }
 
 
-#backstab{
+#familiarForm{
     position:absolute;
-    top: 671px;
-    left: 565px;
-    font-size: 0.8em;
-}
-
-#sneakSilently{
-    position:absolute;
-    top: 698px;
-    left: 565px;
-    font-size: 0.8em;
-}
-
-#hideInShadows{
-    position:absolute;
-    top: 722px;
-    left: 565px;
-    font-size: 0.8em;
-}
-
-#pickPocket{
-    position:absolute;
-    top: 750px;
-    left: 565px;
-    font-size: 0.8em;
+    top: 995px;
+    left: 670px;
+    font-size: 0.65em;
+    width: 250px;
 }
 
 
-#climb{
+#knownSpells{
     position:absolute;
-    top: 776px;
-    left: 565px;
-    font-size: 0.8em;
+    top: 642px;
+    left: 555px;
 }
 
-#pickLock{
+#maxSpellLevel{
     position:absolute;
-    top: 802px;
-    left: 565px;
-    font-size: 0.8em;
+    top: 672px;
+    left: 555px;
 }
 
-#findTrap{
+
+#patronName{
     position:absolute;
-    top: 833px;
-    left: 565px;
-    font-size: 0.8em;
+    top: 880px;
+    left: 390px;
+    font-size: 1em;
 }
 
-#disableTrap{
-    position:absolute;
-    top: 861px;
-    left: 565px;
-    font-size: 0.8em;
-}
 
-#forgeDoc{
+#patronDescription{
     position:absolute;
-    top: 888px;
-    left: 565px;
-    font-size: 0.8em;
-}
-
-#disguiseSelf{
-    position:absolute;
-    top: 913px;
-    left: 565px;
-    font-size: 0.8em;
-}
-
-#readLanguages{
-    position:absolute;
-    top: 940px;
-    left: 565px;
-    font-size: 0.8em;
-}
-
-#handlePoison{
-    position:absolute;
-    top: 965px;
-    left: 565px;
-    font-size: 0.8em;
-}
-
-#castSpellScroll{
-    position:absolute;
-    top: 990px;
-    left: 565px;
-    font-size: 0.8em;
+    top: 908px;
+    left: 390px;
+    font-size: 0.7em;
+    width: 250px;
 }

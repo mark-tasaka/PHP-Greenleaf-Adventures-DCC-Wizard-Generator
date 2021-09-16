@@ -42,9 +42,9 @@ function getGear($input)
 
 function getRandomGear()
 {
-        $gearArray = array(0, 21, 7, 17, 22, 23);
+        $gearArray = array(0, 7, 17, 22, 23);
 
-        $numberOfGear = rand(5, 15);
+        $numberOfGear = rand(5, 12);
 
         $addToArray = array(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20);
 

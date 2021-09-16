@@ -225,7 +225,6 @@
        $meleeHitLuckyBonus = meleeAttackLuckSign($luckMod, $luckySign[0]);
 
         $meleeToHit = $attackBonus + $meleeHitLuckyBonus + $strengthMod;
-       //$meleeToHit =$meleeHitLuckyBonus + $strengthMod;
 
        $meleeDamageLuckyBonus = meleeDamageLuckSign($luckMod, $luckySign[0]);
 
@@ -235,7 +234,6 @@
         $missileHitLuckyBonus = missileAttackLuckSign($luckMod, $luckySign[0]);
 
         $missileToHit = $attackBonus + $missileHitLuckyBonus + $agilityMod;
-       // $missileToHit = $missileHitLuckyBonus + $agilityMod;
 
         $missileDamageLuckyBonus = missileDamageLuckSign($luckMod, $luckySign[0]);
 
@@ -264,6 +262,61 @@
        $tradeGoodsAddition = tradeGoodsAddition($profession, $trainedWeapon);
 
  
+       $knownSpells = knownSpells($level);
+       $maxSpellLevel = maxSpellLevel($level);
+
+       
+       $patronArray = array();
+
+       //For Patron
+       if(isset($_POST['thePatron']) && $_POST['thePatron'] == 1) 
+       {
+           $patronNumber = rand(0, 7);
+           $patronArray = getPatron($patronNumber);   
+
+           $patronName = $patronArray[0];
+           $patronDescription = $patronArray[1];
+       }
+       else
+       {
+           $patronName = "";
+           $patronDescription = "";
+
+       }
+
+
+
+$familiarForm = array();
+        
+//Familiar
+if(isset($_POST['theFamiliar']) && $_POST['theFamiliar'] == 1) 
+{
+    $familiarForm = getFamiliar($alignment);
+
+    $familiarFormAnimal = $familiarForm[0];
+    $familiarFormDescription = $familiarForm[1];
+
+    $familiarTypeName = getFamiliarType($alignment);
+    $familiarType = 'Type: ' . $familiarTypeName;
+
+    $familiarHitPoints = getFamiliarHitPoints($familiarTypeName);
+    $familiarHitDice = getFamiliarHitDice($familiarTypeName); 
+
+    $familiarHp = 'HP: ' . $familiarHitPoints . ' ' . $familiarHitDice;
+
+    $familiarPersonalityShort = familiarPersonality();
+    $familiarPersonality = 'Personality: ' . $familiarPersonalityShort;
+
+}
+else
+{
+    $familiarFormAnimal = "";
+    $familiarFormDescription = "";
+    $familiarType = "";
+    $familiarHp = "";
+    $familiarPersonality = "";
+
+}
 
         $weaponArray = array();
         $weaponNames = array();
@@ -316,14 +369,9 @@
         for($i = 0; $i < $weaponCount; ++$i)
         {
 
-            if($weaponArray[$i] == "4")
+            if($weaponArray[$i] == "1" || $weaponArray[$i] == "3")
             {
-                array_push($gearArray, 26);
-            }
-
-            if($weaponArray[$i] == "18")
-            {
-                array_push($gearArray, 27);
+                array_push($gearArray, 24);
             }
 
         }
@@ -472,6 +520,32 @@
        </span>
        
        
+       <span id="knownSpells">
+           <?php
+           echo $knownSpells;
+           ?>
+       </span>
+       
+       <span id="maxSpellLevel">
+           <?php
+           echo $maxSpellLevel;
+           ?>
+       </span>
+       
+       
+       <span id="patronName">
+            <?php
+                echo $patronName;
+            ?>
+        </span>
+
+        <span id="patronDescription">
+            <?php
+                echo  $patronDescription;
+            ?>
+        </span>
+        
+       
        
        <span id="class">Wizard</span>
        
@@ -594,6 +668,13 @@
            ?>
            </span>
 
+
+        
+           <span id="familiarForm">
+            <?php
+                echo  $familiarFormAnimal . '   ' . $familiarFormDescription . '<br/><br/>' . $familiarType . '<br/><br/>' . $familiarHp . '<br/><br/>' . $familiarPersonality;
+            ?>
+        </span>
 
               
 
